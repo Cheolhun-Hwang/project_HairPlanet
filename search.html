@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hair_Planet</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alfa+Slab+One">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+</head>
+
+<style>
+
+#searchview{
+    margin: 5%;
+    padding: 1%;
+    width: 90%;
+}
+
+body{
+    background-color: #eeeeee;
+}
+
+input[type=text] {
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 1%;
+}
+
+.checkbox{
+    margin: 0%;
+    padding: 0%;
+}
+
+.checkbox > .dcheckbox{
+    width: 90%;
+}
+
+.checkbox > label{
+    width:70px;
+}
+
+strong{
+    height: auto;
+    margin: auto;
+}
+
+select {
+    text-align: center;
+    font-size:90%;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 1%;
+}
+
+select > option{
+    font-size: 80%;
+    text-align: center;
+}
+
+.row{
+    padding:5px;
+    margin: 1px;
+    text-align: center;
+}
+
+.showback {
+    margin-top: 5%; 
+    margin-left: 8%;
+    margin-right:8%; 
+	background: #ffffff;
+	padding: 15px;
+	margin-bottom: 15px;
+	box-shadow: 1px 3px 2px #aab2bd;
+}
+
+tr > td{
+    height: 60px;
+}
+
+tr>td:first-child{
+    min-width: 100px;
+}
+
+
+
+@media  screen and (min-width: 800px){
+    select {
+    text-align: center;
+    font-size:15px;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 1%;
+}
+
+select > option{
+    font-size: 12px;
+    text-align: center;
+}
+}
+
+</style>
+
+<body>
+    <div>
+        <nav class="navbar navbar-default navigation-clean" style="height:70px;">
+            <div class="container">
+                <div class="navbar-header"><a class="navbar-brand" href="#" style="font-size:30px;">Hair Planet</a>
+                    <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                </div>
+                <div class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li role="presentation"><a href="#" style="color:rgb(255,255,255);font-size:20px;">Search </a></li>
+                        <li role="presentation"><a href="#" style="color:rgb(255,255,255);font-size:20px;">Ranking </a></li>
+                        <li role="presentation"><a href="#" style="color:rgb(255,255,255);font-size:20px;">Contactus </a></li>
+                        <li role="presentation"><a href="#" style="color:rgb(255,255,255);font-size:20px;">Login </a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="carousel slide" data-ride="carousel" id="carousel-1">
+        <div class="carousel-inner" role="listbox">
+            <div class="item active"><img src="assets/img/jumbo2.jpg" alt="Slide Image" class="w-100"></div>
+            <div class="item"><img src="assets/img/jumbo2.jpg" alt="Slide Image" class="w-100"></div>
+            <div class="item"><img src="assets/img/jumbo2.jpg" alt="Slide Image" class="w-100"></div>
+        </div>
+        <div><a class="left carousel-control" href="#carousel-1" role="button" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i><span class="sr-only">Previous</span></a>
+            <a class="right carousel-control" href="#carousel-1" role="button" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i><span class="sr-only">Next</span></a>
+        </div>
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-1" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-1" data-slide-to="1"></li>
+            <li data-target="#carousel-1" data-slide-to="2"></li>
+        </ol>
+    </div>
+
+    <div id="searchview" class="showback col-sm-12 col-md-12">
+        <h1 style="font-family:'Alfa Slab One', cursive;margin:1%;">Search </h1>
+        <div id="search_area" align='center'>
+            <form name='search' method='post' >
+                <table border="0" width='95%' align='center'>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <strong class="" align='center' style="font-size:18px;">지역 </strong>
+                            </td>
+                            <td>
+                                <select class="" style="width:20%;min-width:100px;">
+                                    <optgroup label="지역 선택">
+                                        <option value="1" selected>서울</option>
+                                        <option value="2">인천</option>
+                                        <option value="3">경기</option>
+                                        <option value="4">대전</option>
+                                        <option value="5">광주</option>
+                                        <option value="6">부산</option>
+                                        <option value="7">대구</option>
+                                        <option value="8">강원도</option>
+                                        <option value="9">충청도</option>
+                                        <option value="10">전라도</option>
+                                        <option value="11">경상도</option>
+                                        <option value="12">제주</option>
+                                    </optgroup>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong class="" align='center' style="font-size:18px;">키워드 </strong>
+                            </td>
+                            <td>
+                                <div class="checkbox dcheckbox">
+                                    <label class="col-sm-1 col-md-1">
+                                        <input type="checkbox" style="height:auto;top:5%;"/><strong style="font-size:15px;">남성</strong></label>
+                                    <label class="col-sm-1 col-md-1">
+                                        <input type="checkbox" style="height:auto;top:5%;"/><strong style="font-size:15px;">여성</strong></label>
+                                    <label class="col-sm-1 col-md-1">
+                                        <input type="checkbox" style="height:auto;top:5%;"/><strong style="font-size:15px;">아이</strong></label>
+                                    <label class="col-sm-1 col-md-1">
+                                        <input type="checkbox" style="height:auto;top:5%;"/><strong style="font-size:15px;">특수</strong></label>
+                                    <label class="col-sm-1 col-md-1">
+                                        <input type="checkbox" style="height:auto;top:5%;"/><strong style="font-size:15px;">인기</strong></label>
+                                    <label class="col-sm-1 col-md-1">
+                                        <input type="checkbox" style="height:auto;top:5%;"/><strong style="font-size:15px;">심야</strong></label>
+                                    <label class="col-sm-1 col-md-1">
+                                        <input type="checkbox" style="height:auto;top:5%;"/><strong style="font-size:15px;">네일</strong></label>   
+                                    <label class="col-sm-1 col-md-1">
+                                        <input type="checkbox" style="height:auto;top:5%;"/><strong style="font-size:15px;">웨딩</strong></label>  
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong class="" style="font-size:18px;">검색 </strong>
+                            </td>
+                            <td>
+                                <input style="width:70%;" type="text" value="" name="searchKeyword"  />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div align='center' style="margin:20px;">
+                    <button type="submit" class="btn btn-success" aria-label="Left Align">
+                            <span class="glyphicon glyphicon-search" aria-hidden="true" style="padding:1px;">검색하기</span></button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id='search_result_area' class="col-sm-12 col-md-12" style="height:auto;text-align:center;">
+        <p>검생 결과 없음</p>
+        
+        <div class="col-md-4">
+            <div class="row">
+                <div class="thumbnail">
+                <img src="./assets/img/1.PNG" alt="...">
+                <div class="caption">
+                    <h3>Thumbnail label</h3>
+                    <p>...</p>
+                    <p align="center"><a href="#" class="btn btn-primary" role="button">자세히 보기</a></p>
+                </div>
+                </div>
+            </div>
+        </div> 
+
+        <div class="col-md-4">
+            <div class="row">
+                <div class="thumbnail">
+                <img src="./assets/img/1.PNG" alt="...">
+                <div class="caption">
+                    <h3>Thumbnail label</h3>
+                    <p>...</p>
+                    <p align="center"><a href="#" class="btn btn-primary" role="button">자세히 보기</a></p>
+                </div>
+                </div>
+            </div>
+        </div> 
+        
+        <div class="col-md-4">
+            <div class="row">
+                <div class="thumbnail">
+                <img src="./assets/img/1.PNG" alt="...">
+                <div class="caption">
+                    <h3>Thumbnail label</h3>
+                    <p>...</p>
+                    <p align="center"><a href="#" class="btn btn-primary" role="button">자세히 보기</a></p>
+                </div>
+                </div>
+            </div>
+        </div> 
+            
+        <div class="col-md-4">
+            <div class="row">
+                <div class="thumbnail">
+                <img src="./assets/img/1.PNG" alt="...">
+                <div class="caption">
+                    <h3>Thumbnail label</h3>
+                    <p>...</p>
+                    <p align="center"><a href="#" class="btn btn-primary" role="button">자세히 보기</a></p>
+                </div>
+                </div>
+            </div>
+        </div> 
+
+        <div class="col-md-4">
+            <div class="row">
+                <div class="thumbnail">
+                <img src="./assets/img/1.PNG" alt="...">
+                <div class="caption">
+                    <h3>Thumbnail label</h3>
+                    <p>...</p>
+                    <p align="center"><a href="#" class="btn btn-primary" role="button">자세히 보기</a></p>
+                </div>
+                </div>
+            </div>
+        </div> 
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>
