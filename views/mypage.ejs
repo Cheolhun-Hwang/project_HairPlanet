@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- Theme Made By www.w3schools.com - No Copyright -->
+    <title>Hair Planet</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        @font-face{font-family: 'Nanum Pen Script'; src:url('font-awesome/fonts/NanumPenScript-Regular.ttf')}
+        .nanum {
+            font-family: 'Nanum Pen Script', cursive;
+        }
+        
+        .big {
+            font-size: 30px;
+        }
+        
+        body {
+            font: 400 15px Lato, sans-serif;
+            line-height: 1.8;
+            color: #818181;
+        }
+        
+        h2 {
+            font-size: 24px;
+            text-transform: uppercase;
+            color: #303030;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+        
+        h4 {
+            font-size: 19px;
+            line-height: 1.375em;
+            color: #303030;
+            font-weight: 400;
+            margin-bottom: 30px;
+        }
+        
+        .jumbotron {
+            background-image: url(images/jumbo.jpg);
+            color: #fff;
+            padding: 100px 25px;
+            font-family: Montserrat, sans-serif;
+        }
+        
+        .container-fluid {
+            padding: 60px 50px;
+        }
+        
+        .container-fluid .btn {
+            background-color: #ffb900;
+            color: #fff;
+        }
+        
+        .col-sm-3 .glyphicon {
+            font-size: 300px;
+        }
+        
+        .col-sm-4 .glyphicon {
+            font-size: 80px;
+        }
+        
+        .bg-grey {
+            background-color: #f6f6f6;
+        }
+        
+        .logo-small {
+            color: #ffb900;
+            font-size: 50px;
+        }
+        
+        .logo {
+            color: #ffb900;
+            font-size: 200px;
+        }
+        
+        .thumbnail {
+            padding: 0 0 15px 0;
+            border: none;
+            border-radius: 0;
+        }
+        
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            margin-bottom: 10px;
+        }
+        
+        .carousel-control.right,
+        .carousel-control.left {
+            background-image: none;
+            color: #ffb900;
+        }
+        
+        .carousel-indicators li {
+            border-color: #ffb900;
+        }
+        
+        .carousel-indicators li.active {
+            background-color: #ffb900;
+        }
+        
+        .item h4 {
+            font-size: 19px;
+            line-height: 1.375em;
+            font-weight: 400;
+            font-style: italic;
+            margin: 70px 0;
+        }
+        
+        .item span {
+            font-style: normal;
+        }
+        
+        .panel {
+            border: 1px solid #ffb900;
+            border-radius: 0 !important;
+            transition: box-shadow 0.5s;
+        }
+        
+        .panel:hover {
+            box-shadow: 5px 0px 40px rgba(0, 0, 0, .2);
+        }
+        
+        .panel-footer .btn:hover {
+            border: 1px solid #ffb900;
+            background-color: #fff !important;
+            color: #ffb900;
+        }
+        
+        .panel-heading {
+            color: #fff !important;
+            background-color: #ffb900 !important;
+            padding: 25px;
+            border-bottom: 1px solid transparent;
+            border-top-left-radius: 0px;
+            border-top-right-radius: 0px;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+        
+        .panel-footer {
+            background-color: white !important;
+        }
+        
+        .panel-footer h3 {
+            font-size: 32px;
+        }
+        
+        .panel-footer h4 {
+            color: #aaa;
+            font-size: 14px;
+        }
+        
+        .panel-footer .btn {
+            margin: 15px 0;
+            background-color: #ffb900;
+            color: #fff;
+        }
+        
+        .navbar {
+            margin-bottom: 0;
+            background-color: #ffb900;
+            z-index: 9999;
+            border: 0;
+            font-size: 12px !important;
+            line-height: 1.42857143 !important;
+            letter-spacing: 4px;
+            border-radius: 0;
+            font-family: Montserrat, sans-serif;
+        }
+        
+        .navbar li a,
+        .navbar .navbar-brand {
+            color: #fff !important;
+        }
+        
+        .navbar-nav li a:hover,
+        .navbar-nav li.active a {
+            color: #ffb900 !important;
+            background-color: #fff !important;
+        }
+        
+        .navbar-default .navbar-toggle {
+            border-color: transparent;
+            color: #fff !important;
+        }
+        
+        footer .glyphicon {
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: #ffb900;
+        }
+        
+        .slideanim {
+            visibility: hidden;
+        }
+        
+        .slide {
+            animation-name: slide;
+            -webkit-animation-name: slide;
+            animation-duration: 1s;
+            -webkit-animation-duration: 1s;
+            visibility: visible;
+        }
+        
+        .right {
+            text-align: right;
+            display: inline;
+            float: right;
+        }
+        
+        .red {
+            color: red;
+        }
+        
+        .button-size {
+            font-size: 1.5em;
+        }
+
+        h4.subtext{
+            color: #818181;
+            font-weight: 300;
+            font-size: 21px;
+        }
+        
+        @keyframes slide {
+            0% {
+                opacity: 0;
+                transform: translateY(70%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0%);
+            }
+        }
+        
+        @-webkit-keyframes slide {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(70%);
+            }
+            100% {
+                opacity: 1;
+                -webkit-transform: translateY(0%);
+            }
+        }
+        
+        @media screen and (max-width: 768px) {
+            .col-sm-4 {
+                text-align: center;
+                margin: 25px 0;
+            }
+            .btn-lg {
+                width: 100%;
+                margin-bottom: 35px;
+            }
+        }
+        
+        @media screen and (max-width: 480px) {
+            .logo {
+                font-size: 150px;
+            }
+        }
+    </style>
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+                <a class="navbar-brand" href="/">Hair Planet</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/search">SEARCH</a></li>
+                    <li><a href="/ranking">RANKING</a></li>
+                    <li><a href="/trend">TREND</a></li>
+                    <li><a href="/login/logout">LOGOUT</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="jumbotron text-center">
+        <h1>Hair Planet</h1>
+        <p>방문해 주신 여러분을 환영합니다.</p>
+
+    </div>
+
+
+    <!-- Container (Pricing Section) -->
+
+    <div class="container-fluid">
+
+        <div class="col-md-2">
+            <ul class="nav nanum big">
+                <li class="active"><a href="#home" data-toggle="tab">예약내역</a></li>
+                <li><a href="#tab2" data-toggle="tab">포인트 조회</a></li>
+                <li><a href="#tab3" data-toggle="tab">회원탈퇴</a></li>
+            </ul>
+        </div>
+        <div class="tab-content">
+            <div class="tab-pane fade in active" id="home">
+                <div class="col-md-10">
+                    <div class="row slideanim">
+                        <% if(rlist==''){ %>
+                            <div align='center'><h4 class="subtext">예약 내역이 없습니다.</h4></div>
+                        <% }else{ 
+                            rlist.forEach(function(item, index){ %>
+                            <% let date = item.apdate.split(" ") %>
+                        <div class="col-md-4 col-xs-12">
+                            <div class="panel panel-default ">
+                                <div class="panel-heading text-center">
+                                    <div class="nanum">
+                                        <h1><%= date[0] %> <br><%= date[1] %></h1>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <h5>매장</h5>
+                                    <h4><%= item.sname %></h4>
+                                    <h5>담당자</h5>
+                                    <h4><%= item.sdname %> 디자이너</h4>
+                                    <h5>선택메뉴</h5>
+                                    <h4><%= item.sphairname %>
+                                        <div class="right">￦ <%= item.spdprice %></div>
+                                    </h4>
+                                    <h5>할인금액</h5>
+                                    <h4>포인트
+                                        <div class="right">￦ - <%= item.apupoint %>p</div>
+                                    </h4>
+                                    <hr>
+                                    <h4>총 결제금액
+                                        <div class="right red">￦ <%= item.aprprice %></div>
+                                    </h4>
+
+                                </div>
+                                <div class="panel-footer" align='center'>
+                                    <button type="button" onclick="location.href='/info?sid=<%= item.sid %>'" class="btn btn-default">매장으로</button>
+                                    <button type="button" class="btn btn-default cancleBTN" value="<%= date[0] %>" data-no="<%= item.apid %>" data-no2="<%= item.apupoint %>">예약취소</button>
+                                </div>
+                            </div>
+                        </div>
+                        <% }); } %>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="tab-pane fade in" id="tab2">
+                <div class="col-md-10">
+                    <center>
+                        <div class="nanum">
+                            <h1>현재 나의 포인트는?</h1>
+                        </div>
+                    </center><br>
+                    <center>
+                        <h1><span class="glyphicon glyphicon-certificate"></span> <%= upoint %> Point</h1>
+                    </center><br>
+                    <table class="table table-bordered table-hover slideanim">
+                        <caption>
+                            <h2>적립/사용내역</h2>
+                        </caption>
+                        <thead>
+                            <tr>
+                                <th class="col-xs-2 text-center">일자</th>
+                                <th class="col-xs-4 text-center">내용</th>
+                                <th class="col-xs-5 text-center">적립</th>
+                                <th class="col-xs-1 text-center">포인트</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% if(rlist==''){ %>
+                                <tr>
+                                    <td colspan="4"><div align='center'><h4 class="subtext">적립된 내용이 없습니다.</h4></div></td>
+                                </tr>
+                            <% }else{ %>
+                                <% rlist.forEach(function(item, index){ 
+                                    if(item.apupoint > 0){ %>
+                                        <tr class="danger">
+                                            <td class="text-center"><%= item.apdate %></td>
+                                            <td><%= item.sphairname %></td>
+                                            <td class="text-center"><%= item.sname %></td>
+                                            <td class="text-center">- <%= item.apupoint %></td>
+                                        </tr>
+                                    <% } %>
+                                    <tr>
+                                        <td class="text-center"><%= item.apdate %></td>
+                                        <td><%= item.sphairname %></td>
+                                        <td class="text-center"><%= item.sname %></td>
+                                        <td class="text-center">+ <%= item.apapoint %></td>
+                                    </tr>
+                                <% }); %>
+                            <% } %>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+            <div class="tab-pane fade in" id="tab3">
+                <div class="col-md-8 col-md-offset-1">
+                    <img src="images/msg_check.gif">
+                    <div class="panel panel-primary slideanim">
+
+                        <div class="panel-body">
+                            <h4><b>회원정보 및 예약 내역 삭제</b></h4>
+                            회원탈퇴 즉시 회원정보는 모두 삭제되며, 재가입시에도 복원되지 않습니다.
+                            <br>- 삭제되는 정보 : 개인정보, 예약내역, 포인트
+
+                            <hr>
+                            <h4><b>1개월간 회원 재가입 제한</b></h4>
+                            회원탈퇴 후, 1개월간은 회원 재가입이 불가능합니다.
+                            <hr>
+                            <h4><b>탈퇴 후 정보보관</b></h4>
+                            전자상거래등에서의소비자보호에관한법률 제6조에 의거 성명, 주소 등 거래의 주체를 식별할 수 있는 정보에 한하여 서비스 이용에 관한 동의를 철회한 경우에도 이를 보존할 수 있으며, 동법 시행령 제6조에 의거 다음과 같이 거래기록을 보관합니다.
+                            <br>① 표시, 광고에 관한 기록 : 6개월.
+                            <br>② 계약 또는 청약철회 등에 관한 기록 : 5년
+                            <br>③ 대금결제 및 재화등의 공급에 관한 기록 : 5년
+                            <br>④ 소비자의 불만 또는 분쟁처리에 관한 기록 : 3년
+
+                        </div>
+                    </div>
+                    <h2>▶ 어떤 점이 불편하셨나요?</h2>
+                    <p>그 동안 헤어플래닛을 이용해주셔서 감사합니다.
+                        <br>고객님의 의견을 남겨주시면 더 좋은 모습으로 찾아 뵙기 위해 노력하겠습니다. </p>
+                    <div class="panel panel-primary slideanim">
+                        <form name="mypage" id="outForm">
+                            <div class="panel-body">
+                                <div class="col-md-12">
+                                    <div class="col-md-3">
+                                        <label class="radio-inline">
+                                            <input type="radio" name="out" id="out" value="1" checked>  헤어 정보부족
+                                        </label>
+                                    </div>
+                                    <div class="col-md-3 col-md-offset-1">
+                                        <label class="radio-inline">
+                                        <input type="radio" name="out" id="out" value="2" checked>  헤어 가격불만
+                                    </label>
+                                    </div>
+                                    <div class="col-md-3 col-md-offset-1">
+                                        <label class="radio-inline">
+                                            <input type="radio" name="out" id="out" value="3" checked>  결제/예약/취소 불만
+                                        </label>
+                                    </div>
+                                    <div class="col-md-3 ">
+                                        <label class="radio-inline">
+                                            <input type="radio" name="out" id="out" value="4" checked>  개인정보 및 보안우려
+                                        </label>
+                                    </div>
+                                    <div class="col-md-3 col-md-offset-1">
+                                        <label class="radio-inline">
+                                            <input type="radio" name="out" id="out" value="5" checked>  시스템 오류
+                                        </label>
+                                    </div>
+                                    <div class="col-md-3 col-md-offset-1">
+                                        <label class="radio-inline">
+                                            <input type="radio" name="out" id="out" value="6" checked>  헤어플래닛 이용안함
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <div align='center'>
+                                    <button type="button" id="outBTN" class="btn btn-primary">회원탈퇴</button>
+                                </div>
+                            </div>
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="container-fluid text-center">
+        <a href="#myPage" title="To Top">
+            <span class="glyphicon glyphicon-chevron-up"></span>
+        </a>
+        <p>Copyright © All Rights Reserved</p>
+    </footer>
+
+    <script>
+        $(document).ready(function() {
+            // Add smooth scrolling to all links in navbar + footer link
+            $(".navbar a, footer a[href='#myPage'], #link a[href='#contact']").on('click', function(event) {
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 900, function() {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+
+            $(window).scroll(function() {
+                $(".slideanim").each(function() {
+                    var pos = $(this).offset().top;
+
+                    var winTop = $(window).scrollTop();
+                    if (pos < winTop + 600) {
+                        $(this).addClass("slide");
+                    }
+                });
+            });
+
+            $("#outBTN").click(function() {
+                if(confirm("정말로 탈퇴하시겠습니까?")){
+                    var form = document.getElementById('outForm');
+                    form.setAttribute('method', 'post');
+                    form.setAttribute('action', '/mypage/out' );
+                    form.style.display = 'hidden';
+                    form.submit();
+                    alert("이용해주셔서 감사합니다.");
+                }else{
+                    alert("탈퇴를 취소하였습니다.");
+                }
+            });
+
+            $('.cancleBTN').click(function(){
+                var nowdt = new Date();
+                var appointdt = new Date($(this).val());
+
+                if(nowdt >= appointdt){
+                    alert("이전 및 당일 예약은 취소가 불가능합니다.");
+                }else{
+                   if(confirm("정말 취소하시겠습니까?")){
+                    var form = document.createElement('form');
+                    form.setAttribute('method', 'post');
+                    form.setAttribute('action', '/mypage/appoint/cancle?apid='+$(this).attr('data-no')+'&aupoint='+$(this).attr('data-no2') );
+                    form.style.display = 'hidden';
+                    document.body.appendChild(form);
+                    form.submit();
+                    alert("예약이 취소되었습니다.");
+                   }
+                }
+            });
+        })
+    </script>
+
+</body>
+</html>

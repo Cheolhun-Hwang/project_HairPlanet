@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- Theme Made By www.w3schools.com - No Copyright -->
+    <title>Hair Planet</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        @font-face{font-family: 'Nanum Pen Script'; src:url('font-awesome/fonts/NanumPenScript-Regular.ttf')}
+        .nanum {
+            font-family: 'Nanum Pen Script', cursive;
+        }
+        body {
+            font: 400 15px Lato, sans-serif;
+            line-height: 1.8;
+            color: #818181;
+        }
+        
+        h2 {
+            font-size: 24px;
+            text-transform: uppercase;
+            color: #303030;
+            font-weight: 600;
+        }
+        
+        h4 {
+            font-size: 19px;
+            line-height: 1.375em;
+            color: #303030;
+            font-weight: 400;
+        }
+        
+        .jumbotron {
+            background-image: url(images/jumbo.jpg);
+            color: #fff;
+            padding: 100px 25px;
+            font-family: Montserrat, sans-serif;
+        }
+        
+        .container-fluid {
+            padding: 60px 50px;
+        }
+        
+        .container-fluid .btn {
+            background-color: #ffb900;
+            color: #fff;
+        }
+        
+        .col-sm-3 .glyphicon {
+            font-size: 300px;
+        }
+        
+        .col-sm-4 .glyphicon {
+            font-size: 80px;
+        }
+        
+        .bg-grey {
+            background-color: #f6f6f6;
+        }
+        
+        .logo-small {
+            color: #ffb900;
+            font-size: 50px;
+        }
+        
+        .logo {
+            color: #ffb900;
+            font-size: 200px;
+        }
+        
+        .thumbnail {
+            padding: 0 0 15px 0;
+            border: none;
+            border-radius: 0;
+        }
+        
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            margin-bottom: 10px;
+        }
+        
+        .carousel-control.right,
+        .carousel-control.left {
+            background-image: none;
+            color: #ffb900;
+        }
+        
+        .carousel-indicators li {
+            border-color: #ffb900;
+        }
+        
+        .carousel-indicators li.active {
+            background-color: #ffb900;
+        }
+        
+        .item h4 {
+            font-size: 19px;
+            line-height: 1.375em;
+            font-weight: 400;
+            font-style: italic;
+            margin: 70px 0;
+        }
+        
+        .item span {
+            font-style: normal;
+        }
+        
+        .panel {
+            border: 1px solid #ffb900;
+            border-radius: 0 !important;
+            transition: box-shadow 0.5s;
+        }
+        
+        .panel:hover {
+            box-shadow: 5px 0px 40px rgba(0, 0, 0, .2);
+        }
+        
+        .panel-footer .btn:hover {
+            border: 1px solid #ffb900;
+            background-color: #fff !important;
+            color: #ffb900;
+        }
+        
+        .panel-heading {
+            color: #fff !important;
+            background-color: #ffb900 !important;
+            padding: 25px;
+            border-bottom: 1px solid transparent;
+            border-top-left-radius: 0px;
+            border-top-right-radius: 0px;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+        
+        .panel-footer {
+            background-color: white !important;
+        }
+        
+        .panel-footer h3 {
+            font-size: 32px;
+        }
+        
+        .panel-footer h4 {
+            color: #aaa;
+            font-size: 14px;
+        }
+        
+        .panel-footer .btn {
+            margin: 15px 0;
+            background-color: #ffb900;
+            color: #fff;
+        }
+        
+        .navbar {
+            margin-bottom: 0;
+            background-color: #ffb900;
+            z-index: 9999;
+            border: 0;
+            font-size: 12px !important;
+            line-height: 1.42857143 !important;
+            letter-spacing: 4px;
+            border-radius: 0;
+            font-family: Montserrat, sans-serif;
+        }
+        
+        .navbar li a,
+        .navbar .navbar-brand {
+            color: #fff !important;
+        }
+        
+        .navbar-nav li a:hover,
+        .navbar-nav li.active a {
+            color: #ffb900 !important;
+            background-color: #fff !important;
+        }
+        
+        .navbar-default .navbar-toggle {
+            border-color: transparent;
+            color: #fff !important;
+        }
+        
+        footer .glyphicon {
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: #ffb900;
+        }
+        
+        .slideanim {
+            visibility: hidden;
+        }
+        
+        .slide {
+            animation-name: slide;
+            -webkit-animation-name: slide;
+            animation-duration: 1s;
+            -webkit-animation-duration: 1s;
+            visibility: visible;
+        }
+        .table-text{
+            margin-left:5%;
+            color:black;
+        }
+       
+        .middle{
+            text-align:center;
+        }
+        
+       
+        .table tbody tr td{
+            font-size:1.0em;
+        }
+        
+        @keyframes slide {
+            0% {
+                opacity: 0;
+                transform: translateY(70%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0%);
+            }
+        }
+        
+        @-webkit-keyframes slide {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(70%);
+            }
+            100% {
+                opacity: 1;
+                -webkit-transform: translateY(0%);
+            }
+        }
+        
+        @media screen and (max-width: 768px) {
+            .col-sm-4 {
+                text-align: center;
+                margin: 25px 0;
+            }
+            .btn-lg {
+                width: 100%;
+                margin-bottom: 35px;
+            }
+        }
+        
+        @media screen and (max-width: 480px) {
+            .logo {
+                font-size: 150px;
+            }
+        }
+    </style>
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+                <a class="navbar-brand" href="/">Hair Planet</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/search">SEARCH</a></li>
+                    <li><a href="">RANKING</a></li>
+                    <li><a href="/trend">TREND</a></li>
+                    <% if( isLogin ){ %>
+                    <li><a href="/mypage">MYPAGE</a></li>
+                    <li><a href="/login/logout">LOGOUT</a></li>
+                    <% }else{ %>
+                    <li><a href="/login">LOGIN</a></li>
+                    <% } %>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="jumbotron text-center">
+        <h1>Hair Planet</h1>
+        <p>방문해 주신 여러분을 환영합니다.</p>
+
+    </div>
+
+    <!-- Container (About Section) -->
+    <div id="about" class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <center><h1>RANKING</h1><br></center>
+
+            </div>
+        </div><br>
+        <div class="row">
+
+            <%  
+                rlist.forEach(function(item, index){
+                    if(index <3){
+            %>
+
+                    <div class="col-md-4 col-xs-12">
+                            <div class="panel panel-default col-xs-12">
+                                <div class="panel-body col-xs-12" align="center">
+                                    <img src="<%= item.sphoto1 %>" class="img-circle img-responsive" style="height:100%;">
+                                </div>
+                                <div class="panel-footer col-xs-12">
+                                    <div class="col-xs-4">
+                                        <img src="images/medal<%= (index+1) %>.png" style="width:70%;"> 
+                                    </div>
+                                    <div class="col-xs-8">
+                                        <h2 style="overflow:hidden; text-overflow:ellipsis; white-space:nowrap; "><%= item.sname %></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            <% }}); %>
+
+            
+        </div>
+        <br><hr><br>
+<div class="row">
+            <div class="col-sm-12">
+       <div class="table-responsive">          
+  <table class="table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Sales</th>
+        <th>City</th>
+      </tr>
+    </thead>
+    <tbody id="list">
+        <% rlist.forEach(function(item, index){ %>
+            <% if(index == 0){ %>
+                <tr class="active">
+            <% }else if(index == 1){ %>
+                <tr class="info" >
+            <% }else if(index == 2){ %>
+                <tr class="warning">
+            <% }else { %>
+                <tr >
+            <% } %>
+            <td class="detail" data-no="<%= item.sid %>"><%= index+1 %></td>
+            <td class="detail" data-no="<%= item.sid %>"><%= item.sname %></td>
+            <td class="detail" data-no="<%= item.sid %>"><%= item.rsalse %>원</td>
+            <td class="detail" data-no="<%= item.sid %>"><%= item.sddr %></td>
+          </tr>
+        <% }); %>
+      
+    </tbody>
+  </table>
+
+</div>
+        
+        
+                
+    </div>
+    </div>
+
+
+
+
+    <footer class="container-fluid text-center">
+        <a href="#myPage" title="To Top">
+            <span class="glyphicon glyphicon-chevron-up"></span>
+        </a>
+        <p>Copyright © All Rights Reserved</p>
+    </footer>
+
+    <script>
+        $(document).ready(function() {
+            // Add smooth scrolling to all links in navbar + footer link
+            $(".navbar a, footer a[href='#myPage'], #link a[href='#contact']").on('click', function(event) {
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 900, function() {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+
+            $(window).scroll(function() {
+                $(".slideanim").each(function() {
+                    var pos = $(this).offset().top;
+
+                    var winTop = $(window).scrollTop();
+                    if (pos < winTop + 600) {
+                        $(this).addClass("slide");
+                    }
+                });
+            });
+
+            $('#list').on('click', 'td.detail', function(e){
+                var cno = $(this).attr('data-no');
+                if(confirm("해당 헤어숍으로 이동하시겠습니까?")){
+                    window.location.href = "/info?sid="+cno;
+                }
+            });
+
+            
+        });
+    </script>
+
+</body>
+</html>
